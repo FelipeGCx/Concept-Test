@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: transparent;
+  overflow-x: hidden;
+}
+h1 {
+  font-size: 3.2rem;
+  line-height: 1.1;
+}
+h2 {
+  font-size: 2.4rem;
+}
+h3 {
+  font-size: 1.6rem;
+}
+p,
+span,
+a,
+input,
+label,
+select,
+textarea {
+  font-size: 1.4rem;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  appearance: none;
+  border: none;
+  outline: none;
+}
+button {
+  cursor: default;
+  appearance: none;
+  border: none;
+  outline: none;
+}
+textarea {
+  font-family: inherit;
+}

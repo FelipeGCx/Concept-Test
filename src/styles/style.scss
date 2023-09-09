@@ -1,0 +1,24 @@
+// I normalze my font-size to improve my calculates with scss for that reason, I comment these imports
+// @tailwind base; 
+// @tailwind components;
+// @tailwind utilities; 
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+
+:root {
+  font-size: 0.625rem;
+  font-family: 'Montserrat', 'Poppins', sans-serif;
+}
+body {
+  margin: 0;
+  background-color: $p10;
+  color: $p100;
+}
+#app {
+  display: flex;
+  justify-content: center;  
+  align-items: center;
+  flex-direction: column;
+  gap: 5rem;
+  padding: $pd-lg;
+}
