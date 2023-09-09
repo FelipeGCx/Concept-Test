@@ -1,6 +1,67 @@
 <script setup lang="ts">
-</script>
-<template></template>
-<styles lang='scss'>
+import { markRaw, ref } from "vue";
+import { LanguageData } from "@/types";
+import {
+  UnitedKingdomFlag,
+  ColombiaFlag,
+  ItalyFlag,
+  FranceFlag,
+} from "@/assets/icons";
 
-</styles>
+const languagesValues = ref<Array<LanguageData>>([
+  {
+    locale: "co",
+    description: "descripción",
+    value: "",
+    placeholder: "escribe algo en español",
+    flag: markRaw(ColombiaFlag),
+  },
+  {
+    locale: "gb",
+    description: "description",
+    value: "",
+    placeholder: "write something in english",
+    flag: markRaw(UnitedKingdomFlag),
+  },
+  {
+    locale: "it",
+    description: "descrizione",
+    value: "",
+    placeholder: "scrivere qualcosa in italiano",
+    flag: markRaw(ItalyFlag),
+  },
+  {
+    locale: "fr",
+    description: "description",
+    value: "",
+    placeholder: "écrire quelque chose en français",
+    flag: markRaw(FranceFlag),
+  },
+]);
+const currentItem = ref(languagesValues.value[0]);
+const changeLanguage = () => {
+  const index = languagesValues.value.findIndex(
+    (e) => e.locale === currentItem.value.locale
+  );
+  currentItem.value =
+    index + 1 >= languagesValues.value.length
+      ? languagesValues.value[0]
+      : languagesValues.value[index + 1];
+};
+</script>
+<template>
+  <div class="note-container">
+    <h1>{{ currentItem.description }}</h1>
+    <button @click="changeLanguage">
+      <component class="flag" :is="currentItem.flag"></component>
+    </button>
+    <textarea
+      name="note"
+      id="note"
+      cols="30"
+      rows="10"
+      v-model="currentItem.value"
+      :placeholder="currentItem.placeholder"
+    ></textarea>
+  </div>
+</template>
