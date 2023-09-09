@@ -1,0 +1,45 @@
+.note-container {
+  border-radius: $border-radius-lg;
+  background-color: $p90;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto 1fr;
+  gap: $gap-md;
+  padding: $pd-lg;
+  width: fit-content;
+  height: fit-content;
+  h1 {
+    grid-area: 1/1/2/2;
+    text-transform: capitalize;
+    font-size: 2rem;
+    font-weight: 500;
+    margin: auto 0 0 0;
+    color: $p10;
+  }
+  button {
+    grid-area: 1/2/2/3;
+    border-radius: 50%;
+    width: 2.8rem;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+    position: relative;
+    display: grid;
+    place-items: center;
+    transition: transform 300ms ease-out;
+    cursor: pointer; // just because the button has no hover effect
+    &:hover {
+      transform: scale(1.1);
+    }
+    .flag {
+      position: absolute;
+      height: 100%;
+    }
+  }
+  textarea {
+    grid-area: 2/1/3/3;
+    border-radius: $border-radius-lg;
+    padding: $pd-lg;
+    min-width: 18rem;
+    min-height: 8rem;
+  }
+}

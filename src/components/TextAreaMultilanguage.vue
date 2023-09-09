@@ -65,3 +65,8 @@ const changeLanguage = () => {
     ></textarea>
   </div>
 </template>
+
+<!-- wiht scss -->
+<styles lang="scss" scoped src="./styles/scss.scss" />
+<!-- with tailwind -->
+<!-- <styles lang="scss" scoped src="./styles/tailwind.scss"/>  -->
