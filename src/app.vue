@@ -1,9 +1,11 @@
 <template>
-  <HelloWorld />
+  <Information />
+  <TextAreaMultilanguage />
 </template>
 
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue';
+import TextAreaMultilanguage from "@/components/TextAreaMultilanguage.vue";
+import Information from "@/components/Information.vue";
 </script>
 
 <style scoped></style>
