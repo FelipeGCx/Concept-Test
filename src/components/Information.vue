@@ -20,10 +20,10 @@
         principio e intentar realizarlos con tailwind posteriormente con la
         documentación e implementando la aplicación de esta tecnología como esta
         en el archivo <span>HelloWorld.vue</span> usando la palabra reservada
-        @apply, se dejan los dos ejemplos en la correspondientes por separado en
-        el archivo <span>TextAreaMultilanguage.vue</span>, se debe descomentar
-        y comentar el style que se quiera visualizar con el fin de evitar
-        sobreescrituras.
+        @apply, se dejan los dos ejemplos correspondientes por separado en el
+        archivo <span>TextAreaMultilanguage.vue</span>, se debe descomentar y
+        comentar el style que se quiera visualizar con el fin de evitar
+        sobreescrituras (hacer un refresh de la pestaña al cambiar de estilos).
       </p>
     </section>
   </article>
