@@ -4,7 +4,7 @@ import { LanguageData, MinLanguageData } from "@/types";
 import { languagesValues } from "./languagesValues";
 
 interface Emits {
-  (e: "update", value: string): void;
+  (e: "update", value: MinLanguageData): void;
   (e: "updateList", value: Array<MinLanguageData>): void;
 }
 const emit = defineEmits<Emits>();
@@ -20,7 +20,9 @@ const changeLanguage = () => {
       : languagesValues.value[index + 1];
 };
 const updatedValue = () => {
-  emit("update", currentItem.value.value);
+  const { locale, value } = currentItem.value;
+  emit("update", { locale, value });
+  
   const languageItem = languagesValues.value.map((item: LanguageData) => {
     const { locale, value } = item;
     return { locale, value };
