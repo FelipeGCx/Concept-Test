@@ -1,9 +1,12 @@
 import { UnitedKingdomFlag } from "@/assets/icons";
 
-export type LanguageData = {
+export type MinLanguageData = {
   locale: string;
-  description: string;
   value: string;
+};
+
+export type LanguageData = MinLanguageData & {
+  description: string;
   placeholder: string;
   flag: typeof UnitedKingdomFlag;
 };
