@@ -11,8 +11,8 @@ import TextAreaMultilanguage from "@/components/TextAreaMultilanguage/TextAreaMu
 import Information from "@/components/Information.vue";
 import { MinLanguageData } from "@/types";
 
-const updateReceiver = (value: string | Array<MinLanguageData>) => {
-  console.info({ value });
+const updateReceiver = (value: MinLanguageData | Array<MinLanguageData>) => {
+  console.table(value);
 };
 </script>
 
