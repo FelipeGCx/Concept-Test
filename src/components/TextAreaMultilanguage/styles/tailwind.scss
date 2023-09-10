@@ -1,0 +1,15 @@
+.note-container {
+  @apply bg-slate-100 p-4 rounded-3xl grid grid-flow-row grid-flow-col gap-4 w-fit h-fit;
+  h1 {
+    @apply text-3xl font-medium text-slate-700 capitalize row-start-1  col-start-1 h-fit mt-auto m-0;
+  }
+  button {
+    @apply w-11 row-start-1 col-start-2  rounded-full relative grid place-items-center overflow-hidden aspect-square cursor-pointer col-span-1 h-fit place-self-end ease-out duration-300 hover:scale-110;
+    .flag {
+      @apply absolute h-full;
+    }
+  }
+  textarea {
+    @apply row-start-2 text-slate-800 col-start-1 row-end-2 col-end-3 p-4  rounded-3xl min-w-min min-h-min;
+  }
+}
